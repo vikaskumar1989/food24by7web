@@ -123,6 +123,10 @@
               "devServerTarget": "food24by7web:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "midnightfoodoct2018"
+  },
+  "targets": {
+    "midnightfoodoct2018": {
+      "hosting": {
+        "food24by7web": [
+          "midnightfoodoct2018"
+        ]
+      }
+    }
   }
 }

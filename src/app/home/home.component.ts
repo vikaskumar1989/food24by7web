@@ -17,7 +17,13 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.afAuth.authState.subscribe((auth) => {
       console.log('auth', auth);
-      this.router.navigate(['inventory'])
+      if(auth == null){
+        this.router.navigate(['/']);
+      }
+      else{
+        this.router.navigate(['inventory']);
+
+      }
       // this.authState = auth;
       // this.isUserAdmin = false;
       // if (this.router.getCurrentNavigation.name === 'login') {

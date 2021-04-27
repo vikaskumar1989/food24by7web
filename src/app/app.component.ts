@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { NavigationStart, Router, Event } from '@angular/router';
+
+import { LoginService } from '../app/services/login.service';
 
 
 @Component({
@@ -7,6 +10,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'food24by7web';
-  
+  title = 'FOOD 24BY7 Admin';
 }

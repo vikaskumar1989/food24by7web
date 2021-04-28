@@ -13,6 +13,9 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MaterialModule } from '../app/material-ui.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AppRoutingModule,
     AngularFireModule.initializeApp(environment),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    BrowserAnimationsModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,34 +1,27 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+<mat-toolbar color="primary">
+    <!-- <mat-icon>home</mat-icon> -->
+    <span>FOOD 24BY7</span>
+    <span class="example-spacer"></span>
+    <button mat-button routerLinkActive="active" routerLink="/home/orders">Orders</button>
+    <button mat-button routerLinkActive="active" routerLink="/home/menu">Menu</button>
+    <button mat-button routerLinkActive="active" routerLink="/home/reports">Reports</button>
+    <button mat-button routerLinkActive="active" routerLink="/home/customers">Customers</button>
+    <span class="example-spacer"></span>
+
+    <div>
+        <span>{{ loginSrv.userName }}</span>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>account_circle</mat-icon>
         </button>
-        <a class="navbar-brand" routerLink="/">FOOD 24BY7</a>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03" *ngIf="auth.user | async as user">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" routerLinkActive="active" routerLink="/home/orders">Orders</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLinkActive="active" routerLink="/overview">Overview</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLinkActive="active" routerLink="/menu">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLinkActive="active" routerLink="/reports">Reports</a>
-                </li>
-            </ul>
-<!--            
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form> -->
-           <div *ngIf="auth.user | async as user" class="userInfo">
-                <p>{{ user.displayName }}</p> 
-                <button (click)="logout()" class="btn btn-primary" type="button">Logout</button>
-           </div>
-        </div>
+        <mat-menu #menu="matMenu">
+        <button mat-menu-item disabled>
+            <mat-icon>perm_identity</mat-icon>
+            <span>My Account</span>
+        </button>
+        <button mat-menu-item (click)="loginSrv.doLogout()">
+            <mat-icon>power_settings_new</mat-icon>
+            <span>Logout</span>
+        </button>
+        </mat-menu>
     </div>
-</nav>
+</mat-toolbar>

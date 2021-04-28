@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import firebase from 'firebase/app';
 import { Router } from '@angular/router';
@@ -6,36 +6,34 @@ import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
-  private userLoggedin: boolean = false;
-  private uid: String = '';
+export class LoginService implements OnInit{
+  userName: any = 'User';
 
   constructor(private auth: AngularFireAuth, private router: Router) {
-    auth.authState.subscribe((user) => {
-      if(user == null){
-        console.log('User Not  Login. ');
-         this.userLoggedin = false;
-      } else {
-        console.log('User Loggedin. ');
-        this.userLoggedin = true;
+    this.auth.authState.subscribe(
+      user => {
+        console.log("Login Srv authState user: ", user);
+        if(user != null){
+          this.userName = user.displayName;
+        }
       }
-    });
-   }
+    );
+  }
 
-  isUserLogin(): boolean{
-    return this.userLoggedin;
+  ngOnInit(){
+    
   }
 
   doLogin(): void{
     this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then((user) => {
-      // this.uid = user.user?.uid.toString();
-      console.log('Signin success. USER ID', user.user?.uid);
-      console.log('Signin New User.', user.additionalUserInfo?.isNewUser);
+      console.log('Login Srv success. USER ID', user.user?.uid);
+      console.log('Login Srv New User.', user.additionalUserInfo?.isNewUser);
       this.router.navigateByUrl('/home');
     });
   }
 
   doLogout(): void{
     this.auth.signOut();
+    this.router.navigateByUrl('/login');
   }
 }

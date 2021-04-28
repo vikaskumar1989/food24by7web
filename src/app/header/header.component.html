@@ -1,13 +1,14 @@
 <mat-toolbar color="primary">
     <!-- <mat-icon>home</mat-icon> -->
     <span>FOOD 24BY7</span>
-    <span class="example-spacer"></span>
+
+    <span class="menu-spacer"></span>
     <button mat-button routerLinkActive="active" routerLink="/home/orders">Orders</button>
     <button mat-button routerLinkActive="active" routerLink="/home/menu">Menu</button>
     <button mat-button routerLinkActive="active" routerLink="/home/reports">Reports</button>
     <button mat-button routerLinkActive="active" routerLink="/home/customers">Customers</button>
-    <span class="example-spacer"></span>
 
+    <span class="right-side-menu-spacer"></span>
     <div>
         <span>{{ loginSrv.userName }}</span>
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">

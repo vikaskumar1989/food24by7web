@@ -3,32 +3,36 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
-import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AdminComponent } from './admin/admin/admin.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 
 const routes: Routes = [
-  { path : 'login', component: LoginComponent},
-  { path: '', redirectTo: '/', pathMatch:'full'},
-  { path: '/', component: AppComponent},
+  { path : 'login', component: LoginComponent},  
+  { path: '', redirectTo: '/home', pathMatch:'full'},
   { 
-    path: 'home', 
+    path: 'home',
     component: HomeComponent,
     canActivate: [AngularFireAuthGuard],
-    data: {authGuardPipe: redirectUnauthorizedToLogin},
-    children: [
-      { path :'orders', loadChildren: () => import('./orders/orders.module').then(m => m.OrdersModule)},
-      { path: 'inventory', loadChildren: () => import('./inventory/inventory.module').then(m => m.InventoryModule)}
-    ]
+    data: {authGuardPipe: redirectUnauthorizedToLogin}
   },
+  { 
+    path : 'admin', 
+    component: AdminComponent,
+    children: [
+      {path: 'orders', loadChildren: () => import('./admin/orders/orders.module').then(m=>m.OrdersModule)}
+    ]
+  },  
   { path: '**', component: PageNotFoundComponent},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  bootstrap: [AppComponent]
 })
 export class AppRoutingModule { }

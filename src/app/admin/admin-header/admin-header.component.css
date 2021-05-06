@@ -1,0 +1,12 @@
+.right-side-menu-spacer {
+    flex: 1 1 auto;
+  }
+
+  .menu-spacer {
+    flex: 0.1 0.1 auto;
+  }
+
+  .active{
+    background: white;
+    color: blueviolet;
+  }

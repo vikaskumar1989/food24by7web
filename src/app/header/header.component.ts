@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { LoginService } from '../services/login.service';
 
 @Component({
@@ -8,7 +7,6 @@ import { LoginService } from '../services/login.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
   constructor(public loginSrv: LoginService) { }
 
   ngOnInit(): void {

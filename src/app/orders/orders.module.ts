@@ -7,7 +7,7 @@ import { MaterialModule } from '../material-ui.module';
 
 @NgModule({
   declarations: [
-    OrdersListComponent
+    OrdersListComponent,
   ],
   imports: [
     CommonModule,

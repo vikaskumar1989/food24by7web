@@ -6,12 +6,14 @@ import { AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AppComponent } from './app.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 
 const routes: Routes = [
   { path : 'login', component: LoginComponent},
-  { path: '', redirectTo: '/home', pathMatch:'full'},
+  { path: '', redirectTo: '/', pathMatch:'full'},
+  { path: '/', component: AppComponent},
   { 
     path: 'home', 
     component: HomeComponent,

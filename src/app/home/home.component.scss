@@ -1,0 +1,62 @@
+.header_logo {
+    height: 50px;
+    img{
+        width: 150px;
+    }
+}
+
+.hand_mock_img{
+    margin-top: 100px;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.mobileNumberForm {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+}
+
+.home_page {
+    position: relative;
+}
+
+.errorField {
+    width: 283px;
+    height: 40px;
+    border: solid 2px red;
+    color: white;
+    border-radius: 5px;
+}
+
+input {
+    width: 200px;
+    border-radius: 5px;
+    height: 40px;
+    border: transparent;
+    box-shadow: 0 0 20px white;
+    padding-left: 10px;
+}
+
+button {
+    margin-left: 10px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: green;
+    border: transparent;
+    box-shadow: 0 0 20px greenyellow;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+/* Webkit browsers like Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

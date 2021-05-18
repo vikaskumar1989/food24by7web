@@ -3,7 +3,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-// import $ from 'jquery';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-home',

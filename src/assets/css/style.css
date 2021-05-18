@@ -338,7 +338,7 @@ input::-webkit-input-placeholder {
 	transition: all 0.4s;
     width: 100%;
     z-index: 99;
-	padding: 18px 20px;
+	padding: 18px 0;
 }
 .mainmenu {
     text-align: right;
@@ -417,7 +417,7 @@ input::-webkit-input-placeholder {
 }
 .hero-area-content {
     color: #fff;
-	padding: 80px 20px 170px;
+	padding: 80px 0 170px;
 }
 .hero-area-content h1 {
     color: #fff;
@@ -554,7 +554,7 @@ input::-webkit-input-placeholder {
 ---------- VIDEO AREA CSS START --------
 ---------------------------------------*/
 .video-area {
-    background: url(assets/img/.jpg) no-repeat center / cover;
+    /* background: url(assets/img/.jpg) no-repeat center / cover; */
     position: relative;
 	background-attachment: fixed;
     text-align: center;

@@ -14,6 +14,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from '../app/material-ui.module';
+import { HomeModule } from './home/home.module';
 import { AdminModule } from './admin/admin.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -21,7 +22,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent,
     PageNotFoundComponent,
   ],
   imports: [
@@ -34,6 +34,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AngularFirestoreModule,
     BrowserAnimationsModule,
     MaterialModule,
+    HomeModule,
     AdminModule
   ],
   providers: [],

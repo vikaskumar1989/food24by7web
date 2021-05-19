@@ -1096,7 +1096,7 @@ h4.post-title a {
     margin-top: 40px;
     border: 1px solid #ddd;
     align-content: center;
-    height: 450px;
+    height: 550px;
 }
 .contact-form input,
 .contact-form textarea,
@@ -1108,6 +1108,9 @@ h4.post-title a {
 	/* transition: all 0.4s;  */
     box-shadow: none;
     margin-left: 0px;
+}
+.contact-form div{
+    margin-bottom: 15px;
 }
 .blog-reply button:hover ,
 .contact-form button:hover {

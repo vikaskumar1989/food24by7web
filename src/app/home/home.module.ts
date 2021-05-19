@@ -14,6 +14,7 @@ import { HomeVideoComponent } from './home-video/home-video.component';
 import { HomeTestimonialComponent } from './home-testimonial/home-testimonial.component';
 import { HomeCounterComponent } from './home-counter/home-counter.component';
 import { MaterialModule } from '../material-ui.module';
+import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
 
 
 @NgModule({
@@ -33,7 +34,9 @@ import { MaterialModule } from '../material-ui.module';
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    RecaptchaModule,
+    RecaptchaFormsModule,
   ]
 })
 export class HomeModule { }

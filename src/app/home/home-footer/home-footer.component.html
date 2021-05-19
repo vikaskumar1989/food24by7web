@@ -12,8 +12,13 @@
                       <input type="number"  formControlName="mobile" placeholder="Mobile"  class="form-control" [ngClass]="getControlValidClass('mobile')" maxlength="10" minlength="10"/>
                       <input type="email" formControlName="email" placeholder="Email" class="form-control" [ngClass]="getControlValidClass('email')"/>
                       <textarea formControlName="message" placeholder="Message"  class="form-control" [ngClass]="getControlValidClass('message')"></textarea>
-                      <!-- <div class="g-recaptcha" data-sitekey="6LeJiJkUAAAAAM2o6bkiVNQGO-KeOKK44eVPpOcz"></div> -->
-                      <button class="button-primary" type="submit" name="submit" [disabled]="contactFormGroup.invalid">Send Message</button>
+                      <!-- <div class="g-recaptcha" (click)="doOnClickCaptcha()" data-sitekey="6LeJiJkUAAAAAM2o6bkiVNQGO-KeOKK44eVPpOcz"></div> -->
+                      <re-captcha
+                        (resolved)="resolved($event)"
+                        formControlName="recaptchaReactive"
+                        siteKey="6LeJiJkUAAAAAM2o6bkiVNQGO-KeOKK44eVPpOcz">
+                      </re-captcha>
+                      <button type="submit" [disabled]="contactFormGroup.invalid">Send Message</button>
                     </form>
                 </div>
             </div>

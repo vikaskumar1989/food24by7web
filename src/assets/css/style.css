@@ -391,7 +391,7 @@ input::-webkit-input-placeholder {
 -------- HERO AREA CSS START --------
 ---------------------------------------*/
 .hero-area {
-    padding-top: 140px;
+    padding-top: 80px;
 	z-index: 1;
 	position: relative;
     background-image: url(../img/hero-area.jpg);
@@ -417,12 +417,14 @@ input::-webkit-input-placeholder {
 }
 .hero-area-content {
     color: #fff;
-	padding: 80px 0 170px;
+	padding: 80px 0px 170px;
+
 }
 .hero-area-content h1 {
+    padding-top: 150px;
     color: #fff;
 }
-.hero-area-content p {
+.hero-area-content h3 {
     margin: 28px 0 25px;
 }
 .hero-area-content .appao-btn {
@@ -430,8 +432,8 @@ input::-webkit-input-placeholder {
     margin-right: 15px;
 }
 .hand-mockup {
-    position: absolute;
-    bottom: -2px;
+    position: relative;
+    /* bottom: -2px; */
     max-width: 100%;
     height: 600px;
     width: 300px;
@@ -967,6 +969,10 @@ input::-webkit-input-placeholder {
     z-index: -1;
 }
 
+.download-area .ptb-90{
+    padding: 20px;
+}
+
 .download-area ,
 .download-area h1,
 .download-area h2,
@@ -1090,14 +1096,18 @@ h4.post-title a {
     margin-top: 40px;
     border: 1px solid #ddd;
     align-content: center;
+    height: 450px;
 }
 .contact-form input,
 .contact-form textarea,
 .contact-form button {
     border: 1px solid #bbb;
+    border-radius: 0%;
 }
 .contact-form button {
-	transition: all 0.4s; 
+	/* transition: all 0.4s;  */
+    box-shadow: none;
+    margin-left: 0px;
 }
 .blog-reply button:hover ,
 .contact-form button:hover {
@@ -1123,6 +1133,7 @@ h4.post-title a {
 }
 .contact-address li .contact-address-icon {
     flex: 1;
+    color: #48a999;
 }
 .contact-address li .contact-address-info {
     flex: 6;
@@ -1140,6 +1151,7 @@ h4.post-title a {
 }
 .contact-address li .contact-address-info a {
     display: block;
+    color: #666666;
 }
 .contact-address p {
     margin-bottom: 45px;

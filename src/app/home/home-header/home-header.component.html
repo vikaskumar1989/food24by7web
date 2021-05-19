@@ -1,0 +1,27 @@
+ <header class="header" [ngClass] = " {'sticky' : isHeaderSticky }">
+    <div class="container">
+      <div class="row flexbox-center">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="header_logo">
+            <a router-link="/home" class="mr-2"><img src="assets/img/logo_white.png" alt="logo" /></a>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-6">
+          <div class="responsive-menu"></div>
+            <div class="mainmenu">
+                <ul id="primary-menu">
+                    <li (click)="scrollToElement('home')"><a class="nav-link" [ngClass]="{'active': isHeaderMenuActive('home')}">Home</a></li> 
+                    <li (click)="scrollToElement('about')"><a class="nav-link"  [ngClass]="{'active': isHeaderMenuActive('about')}">About Us</a></li>
+                    <li (click)="scrollToElement('feature')"><a class="nav-link"  [ngClass]="{'active': isHeaderMenuActive('feature')}">Feature</a></li>
+                    <li (click)="scrollToElement('contact')"><a class="nav-link"  [ngClass]="{'active': isHeaderMenuActive('contact')}">Contact Us</a></li> 
+                    <!-- <li><a class="nav-link" href="#screenshot">Screenshot</a></li>
+                    <li><a class="nav-link" href="#pricing">Pricing</a></li>
+                    <li><a class="nav-link" href="#team">Team</a></li>
+                  <li data-toggle="modal" data-target="#sendAppLinkModal"><a class="appao-btn">Send App Link</a></li> -->
+                </ul>
+           
+            </div>
+        </div>
+      </div>
+    </div>
+  </header>

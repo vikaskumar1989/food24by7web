@@ -1,0 +1,78 @@
+<!-- footer section start -->
+<footer class="footer ptb-90" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+              
+                <div class="contact-form">
+                    <h4>Send Message</h4>
+                    <p class="form-message"></p>
+                    <form class="form" [formGroup]="contactFormGroup" (ngSubmit)="onContactSubmit()">
+                      <input type="text" formControlName="name" placeholder="Name" class="form-control" [ngClass]="getControlValidClass('name')">
+                      <input type="number"  formControlName="mobile" placeholder="Mobile"  class="form-control" [ngClass]="getControlValidClass('mobile')" maxlength="10" minlength="10"/>
+                      <input type="email" formControlName="email" placeholder="Email" class="form-control" [ngClass]="getControlValidClass('email')"/>
+                      <textarea formControlName="message" placeholder="Message"  class="form-control" [ngClass]="getControlValidClass('message')"></textarea>
+                      <!-- <div class="g-recaptcha" data-sitekey="6LeJiJkUAAAAAM2o6bkiVNQGO-KeOKK44eVPpOcz"></div> -->
+                      <button class="button-primary" type="submit" name="submit" [disabled]="contactFormGroup.invalid">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-address">
+                    <h4>Address</h4>
+                    <p>E-516, Sector 7, Near Ramphal Chowk<br>Dwarka, New Delhi, 110075</p>
+                    <ul>
+                        <li>
+                            <div class="contact-address-icon">
+                              <i class="icofont icofont-headphone-alt"></i>
+                            </div>
+                            <div class="contact-address-info">
+                              <a>+91-11-45795260</a>
+                            </div>
+                        </li>
+                        <li>
+                          <div class="contact-address-icon">
+                            <i class="icofont icofont-envelope"></i>
+                          </div>
+                          <div class="contact-address-info">
+                            <a>info@food24by7.com</a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="contact-address-icon">
+                            <i class="icofont icofont-web"></i>
+                          </div>
+                          <div class="contact-address-info">
+                            <a class="link" href="" router-link="/home" >https://www.food24by7.com</a>
+                          </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+  
+        <div class="row" #address>
+            <div class="col-lg-12">
+                <div class="copyright-area">
+                    <ul>
+                      <li><a target="blank" href="https://www.facebook.com/food.24by7.2019/"><i class="icofont icofont-social-facebook"></i></a></li>
+                      <li><a target="blank" href="https://twitter.com/food24by7"><i class="icofont icofont-social-twitter"></i></a></li>
+                      <li><a target="blank" href="https://www.instagram.com/food_24by7/"><i class="icofont icofont-social-instagram"></i></a></li>
+                    </ul>
+                    <p>&copy;{{copyRightDate | date: 'yyyy'}} All rights reserved </p>
+                    <p>
+                        <a routerLink="/home/privacy">Privacy Policy</a>
+                        <span>&nbsp; &nbsp; &nbsp;</span>
+                        <a routerLink="/home/terms">Terms &amp; Conditions</a>
+                        <span>&nbsp; &nbsp; &nbsp;</span>
+                        <a routerLink="/home/faq">FAQs</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+  
+  
+  
+  

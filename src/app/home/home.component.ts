@@ -5,6 +5,8 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import * as $ from 'jquery';
 
+import { HostListener } from '@angular/core';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,15 +15,12 @@ import * as $ from 'jquery';
 export class HomeComponent  {
 
   TEXT_LOCAL_API_KEY: string;
-  isNavbarCollapsed: Boolean;
-  mobile: any;
 
   constructor(
     // private request: HttpClient,
     // private router: Router,
     private db: AngularFirestore) {
       this.TEXT_LOCAL_API_KEY = 'i+iy0zbPgcs-634j1eHbd3vFluj9jMwbnWWiCDOuGJ';
-      this.isNavbarCollapsed = true;
   }
 
   sendUserAppLink() {

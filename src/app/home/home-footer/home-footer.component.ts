@@ -37,10 +37,10 @@ export class HomeFooterComponent implements OnInit {
      this.contactFormData = Object.assign(this.contactFormData, {date: new Date()}, this.contactFormGroup.value);
      delete this.contactFormData['recaptchaReactive'];
      console.log('HomeFooterComponent : onContactSubmit: ',this.contactFormData);
-    //  this.db.collection('/getapp/contactUsWebsite/messages').add(this.contactFormData).then((res)=>{
-    //    console.log('HomeFooterComponent : onContactSubmit: Message set to firebase: ', res);
-    //    this.contactFormGroup.reset();
-    //  })
+     this.db.collection('/getapp/contactUsWebsite/messages').add(this.contactFormData).then((res)=>{
+       console.log('HomeFooterComponent : onContactSubmit: Message set to firebase: ', res);
+       this.contactFormGroup.reset();
+     })
    }
 
    resolved(captchaResponse: string) {

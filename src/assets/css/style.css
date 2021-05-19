@@ -437,6 +437,7 @@ input::-webkit-input-placeholder {
     max-width: 100%;
     height: 600px;
     width: 300px;
+    float: right;
 }
 /*------------------------------------
 --------- HERO AREA CSS END ---------

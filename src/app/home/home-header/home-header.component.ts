@@ -1,5 +1,6 @@
 
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-header',
@@ -10,7 +11,7 @@ export class HomeHeaderComponent implements OnInit {
   isHeaderSticky: boolean = false;
   selectedMenuItem: any = 'home';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -19,19 +20,9 @@ export class HomeHeaderComponent implements OnInit {
     
   }
 
-  @HostListener('window:scroll', ['$event'])
-  checkScroll() {
-    this.isHeaderSticky = window.pageYOffset >= 10;
-  }
-
-  isHeaderMenuActive(menuItem:any){
-    return menuItem == this.selectedMenuItem;
-  }
-
-  scrollToElement(elementName: any) {
-    var element = document.getElementById(elementName);
-    console.log('HomeHeaderComponent: scrollToElement : ', element);
-    element?.scrollIntoView({behavior: 'smooth'})
-    this.selectedMenuItem = elementName
+  isHeaderMenuActive(menuItem:string){
+    console.log('isHeaderMenuActive : Url ', this.router.url, 'menu item ', menuItem, this.router.url.indexOf('/home/' + menuItem));
+    
+    return (this.router.url.indexOf('/home/' + menuItem) ==0);
   }
 }

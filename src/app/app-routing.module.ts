@@ -10,12 +10,11 @@ import { AdminComponent } from './admin/admin/admin.component';
 
 const routes: Routes = [
   { path : 'login', component: LoginComponent},  
-  { path: '', redirectTo: '/home', pathMatch:'full'},
+  { path: '', redirectTo: '/home/main', pathMatch:'full'},
   { 
     path: 'home',
+    component: HomeComponent,
     loadChildren: () => import('././home/home.module').then(m=>m.HomeModule)
-    // component: HomeComponent,
-    
   },
   { 
     path : 'admin', 

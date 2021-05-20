@@ -15,6 +15,9 @@ import { HomeTestimonialComponent } from './home-testimonial/home-testimonial.co
 import { HomeCounterComponent } from './home-counter/home-counter.component';
 import { MaterialModule } from '../material-ui.module';
 import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
+import { HomePrivacyComponent } from './home-privacy/home-privacy.component';
+import { HomeTermsComponent } from './home-terms/home-terms.component';
+import { HomeFaqsComponent } from './home-faqs/home-faqs.component';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
     HomeHeroComponent,
     HomeVideoComponent,
     HomeTestimonialComponent,
-    HomeCounterComponent
+    HomeCounterComponent,
+    HomePrivacyComponent,
+    HomeTermsComponent,
+    HomeFaqsComponent
   ],
   imports: [
     CommonModule,

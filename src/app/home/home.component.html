@@ -1,9 +1,6 @@
 <app-home-header></app-home-header>
 <router-outlet></router-outlet>
-<!-- <app-home-hero></app-home-hero> -->
-<!-- <app-home-about></app-home-about> -->
-<!-- <app-home-feature></app-home-feature> -->
-<app-home-video></app-home-video>
-<app-home-testimonial></app-home-testimonial>
-<app-home-counter></app-home-counter>
+<app-home-video *ngIf="isHomeMenuPage()"></app-home-video>
+<app-home-testimonial *ngIf="isHomeMenuPage()"></app-home-testimonial>
+<app-home-counter *ngIf="isHomeMenuPage()"></app-home-counter>
 <app-home-footer></app-home-footer>

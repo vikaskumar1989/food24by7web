@@ -32,7 +32,15 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/assets/css/icofont.css",
+              "src/assets/css/slick.css",
+              "src/assets/css/font-awesome.min.css",
+              "src/assets/css/owl.carousel.css",
+              "src/assets/css/magnific-popup.css",
+              "src/assets/css/switcher-style.css",
+              "src/assets/css/animate.min.css",
               "src/assets/css/style.css",
+              "src/assets/css/responsive.css",
               "src/styles.scss"
             ],
             "scripts": [

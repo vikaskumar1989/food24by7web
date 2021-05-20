@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home-faqs',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeFaqsComponent implements OnInit {
 
-  constructor() { }
+  faqs!: Observable<any[]>;
+  panelOpenState: any;
 
-  ngOnInit(): void {
+  constructor(private db: AngularFirestore) {
   }
 
+  ngOnInit() {
+    this.faqs = this.db.collection('faqs', ref => ref.orderBy('type', 'asc')).valueChanges();
+  }
 }

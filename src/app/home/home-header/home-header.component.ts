@@ -21,7 +21,6 @@ export class HomeHeaderComponent implements OnInit {
   }
 
   isHeaderMenuActive(menuItem:string){
-    console.log('isHeaderMenuActive : Url ', this.router.url, 'menu item ', menuItem, this.router.url.indexOf('/home/' + menuItem));
     
     return (this.router.url.indexOf('/home/' + menuItem) ==0);
   }

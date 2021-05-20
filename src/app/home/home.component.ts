@@ -18,9 +18,15 @@ export class HomeComponent  {
 
   constructor(
     // private request: HttpClient,
-    // private router: Router,
+    private router: Router,
     private db: AngularFirestore) {
       this.TEXT_LOCAL_API_KEY = 'i+iy0zbPgcs-634j1eHbd3vFluj9jMwbnWWiCDOuGJ';
+  }
+
+  isHomeMenuPage(){
+    let homeMenuPageUrls = ['/home/main', '/home/about', '/home/feature'];
+    
+    return homeMenuPageUrls.indexOf(this.router.url) > 0;
   }
 
   sendUserAppLink() {

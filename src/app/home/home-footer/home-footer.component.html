@@ -12,7 +12,6 @@
                       <input type="number"  formControlName="mobile" placeholder="Mobile"  class="form-control" [ngClass]="getControlValidClass('mobile')" maxlength="10" minlength="10"/>
                       <input type="email" formControlName="email" placeholder="Email" class="form-control" [ngClass]="getControlValidClass('email')"/>
                       <textarea formControlName="message" placeholder="Message"  class="form-control" [ngClass]="getControlValidClass('message')"></textarea>
-                      <!-- <div class="g-recaptcha" (click)="doOnClickCaptcha()" data-sitekey="6LeJiJkUAAAAAM2o6bkiVNQGO-KeOKK44eVPpOcz"></div> -->
                       <re-captcha
                         (resolved)="resolved($event)"
                         formControlName="recaptchaReactive"

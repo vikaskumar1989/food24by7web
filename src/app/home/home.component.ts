@@ -24,9 +24,10 @@ export class HomeComponent  {
   }
 
   isHomeMenuPage(){
+
     let homeMenuPageUrls = ['/home/main', '/home/about', '/home/feature'];
-    
-    return homeMenuPageUrls.indexOf(this.router.url) > 0;
+    console.log('HomeComponent: isHomeMenuPage : ', homeMenuPageUrls.indexOf(this.router.url));
+    return homeMenuPageUrls.indexOf(this.router.url) >= 0;
   }
 
   sendUserAppLink() {

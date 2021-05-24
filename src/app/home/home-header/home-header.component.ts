@@ -1,5 +1,7 @@
 
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { MatDialog  } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +13,8 @@ export class HomeHeaderComponent implements OnInit {
   isHeaderSticky: boolean = false;
   selectedMenuItem: any = 'home';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, 
+    public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +25,28 @@ export class HomeHeaderComponent implements OnInit {
 
   isHeaderMenuActive(menuItem:string){
     
-    return (this.router.url.indexOf('/home/' + menuItem) ==0);
+    return (this.router.url.indexOf('/home/' + menuItem) >= 0);
   }
+
+  openGetAppLinkDialog(){
+    const dialogRef = this.dialog.open(GetAppLinkDialog);
+    console.log('Home Header to openGetAppLinkDialog: ')
+
+    dialogRef.afterClosed().subscribe(res => {
+      console.log('Home Header Get App Link Dialog closed: ', res)
+    })
+  }
+}
+
+
+@Component({
+  selector: 'get-app-link-dialog',
+  templateUrl: 'get-app-link-dialog.html',
+})
+export class GetAppLinkDialog {
+  // constructor(public fb:FormBuilder, public dialog: MatDialog){}
+
+  // appLinkFormGroup = this.fb.group({mobile:['', [Validators.required, Validators.min(6000000000), Validators.max(9999999999)]]});
+
+  // getAppLinkSubmit(){}
 }

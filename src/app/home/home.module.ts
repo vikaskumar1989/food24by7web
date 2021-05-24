@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '../material-ui.module';
 
 
 import { HomeRoutingModule } from './home-routing.module';
@@ -13,7 +14,6 @@ import { HomeHeroComponent } from './home-hero/home-hero.component';
 import { HomeVideoComponent } from './home-video/home-video.component';
 import { HomeTestimonialComponent } from './home-testimonial/home-testimonial.component';
 import { HomeCounterComponent } from './home-counter/home-counter.component';
-import { MaterialModule } from '../material-ui.module';
 import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
 import { HomePrivacyComponent } from './home-privacy/home-privacy.component';
 import { HomeTermsComponent } from './home-terms/home-terms.component';

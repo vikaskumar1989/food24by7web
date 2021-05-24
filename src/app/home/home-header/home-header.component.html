@@ -1,4 +1,4 @@
- <header class="header sticky">
+<header class="header sticky">
     <div class="container">
       <div class="row flexbox-center">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -10,17 +10,16 @@
           <div class="responsive-menu"></div>
             <div class="mainmenu">
                 <ul id="primary-menu">
-                    <li [routerLink]="['main']"><a class="nav-link" [ngClass]="{'active': isHeaderMenuActive('main')}">Home</a></li> 
-                    <li [routerLink]="['about']"><a class="nav-link"  [ngClass]="{'active': isHeaderMenuActive('about')}">About Us</a></li>
-                    <li [routerLink]="['feature']"><a class="nav-link"  [ngClass]="{'active': isHeaderMenuActive('feature')}">Features</a></li>
-                    <!-- <li><a class="nav-link" href="#screenshot">Screenshot</a></li>
-                    <li><a class="nav-link" href="#pricing">Pricing</a></li>
-                    <li><a class="nav-link" href="#team">Team</a></li>
-                  <li data-toggle="modal" data-target="#sendAppLinkModal"><a class="appao-btn">Send App Link</a></li> -->
+                  <li [routerLink]="['main']"><a class="nav-link" [ngClass]="{'active': isHeaderMenuActive('main')}">Home</a></li> 
+                  <li [routerLink]="['about']"><a class="nav-link"  [ngClass]="{'active': isHeaderMenuActive('about')}">About Us</a></li>
+                  <li [routerLink]="['feature']"><a class="nav-link"  [ngClass]="{'active': isHeaderMenuActive('feature')}">Features</a></li>
+                  <!-- <li (click)="openGetAppLinkDialog()"><a class="nav-link">App Link</a></li> -->
                 </ul>
-           
             </div>
         </div>
       </div>
     </div>
-  </header>
+</header>
+
+
+
